@@ -63,11 +63,9 @@ span {
 
 .offcanvas-end {
     height: 100vh;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter:blur(10px) !important;
     background-color: transparent;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px) !important;
+
     transform: translateX(100%);
     transition: transform 1s ease-in-out;
    
@@ -106,7 +104,7 @@ p {
 }
 
 .offcanvas-header .offcanvas-title {
-    color: var(--whote-color);
+    color: black;
 }
 
 .navbar-toggler {
