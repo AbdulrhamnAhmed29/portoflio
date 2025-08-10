@@ -9,6 +9,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
+
 :root {
     --main-color: rgb(0, 128, 111);
     --black-color: black;
