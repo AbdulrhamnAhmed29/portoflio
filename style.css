@@ -205,7 +205,7 @@ p {
     border-radius: 50%;
     animation: spinner-rotate 3s linear infinite;
     z-index: 10;
-    /* بدل -1 */
+   
 }
 
 
