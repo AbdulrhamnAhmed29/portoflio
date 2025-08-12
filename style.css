@@ -629,7 +629,7 @@ p.bio {
     align-items: center;
     gap: 8px;
     transition: background-color 0.3s ease;
-    margin-right: 4px;
+margin: 20px;
 }
 
 .whatsapp-btn:hover {
@@ -648,6 +648,7 @@ p.bio {
     align-items: center;
     gap: 8px;
     transition: background-color 0.3s ease;
+  
 }
 
 .email-btn:hover {
@@ -707,6 +708,17 @@ footer a:hover {
     .card-content p {
         font-size: 13px;
     }
+    .email-btn{
+        width: 100%;
+    }
+    .whatsapp-btn{
+        width: 100%;
+    }
+    .contact-info{
+        display: flex;
+        align-items: center;
+    }
+
 
 
 
@@ -731,6 +743,7 @@ footer a:hover {
         display: block !important;
     }
 
+    
 
 
 
