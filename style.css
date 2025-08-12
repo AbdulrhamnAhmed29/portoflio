@@ -9,13 +9,14 @@ html {
     scroll-behavior: smooth;
 }
 
-body, html {
-  overflow-x: hidden;
+body,
+html {
+    overflow-x: hidden;
 }
 
 
 :root {
-    --main-color: rgba(0, 255, 255, 0.938);
+    --main-color: rgba(241, 247, 160, 0.685);
     --black-color: black;
     --whote-color: rgba(255, 255, 255, 0.507);
 }
@@ -50,7 +51,7 @@ span {
 
 .bacgground-navbar {
     background-image: linear-gradient(to bottom,
-            rgba(1, 27, 24, 0.986),
+            rgba(241, 247, 160, 0.349),
             rgba(0, 0, 0, 0.6)
             /* أسود شفاف */
         ) !important;
@@ -58,18 +59,19 @@ span {
 }
 
 .bacgground {
-    background: radial-gradient(circle, rgba(71, 201, 186, 0.233) 0%, rgba(26, 23, 11, 0.089) 70%);
+    background: radial-gradient(circle, rgba(241, 247, 160, 0.192)0%, rgba(26, 23, 11, 0.089) 70%) !important;
 }
 
 .offcanvas-end {
     height: 100vh;
-    backdrop-filter:blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
     background-color: transparent;
 
     transform: translateX(100%);
     transition: transform 1s ease-in-out;
-   
+
 }
+
 .offcanvas.show {
     transform: translateX(0);
 }
@@ -104,7 +106,7 @@ p {
 }
 
 .offcanvas-header .offcanvas-title {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .navbar-toggler {
@@ -113,7 +115,6 @@ p {
 }
 
 .nav-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.233) !important;
     padding-left: 10px;
 }
 
@@ -205,7 +206,7 @@ p {
     border-radius: 50%;
     animation: spinner-rotate 3s linear infinite;
     z-index: 10;
-   
+
 }
 
 
@@ -456,12 +457,16 @@ p.bio {
     background-color: var(--main-color);
     text-align: right;
     padding-right: 10px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 12px;
     line-height: 20px;
     font-weight: bold;
     border-radius: 20px 0 0 20px;
     transition: width 0.6s ease;
+}
+
+.skill p {
+    color: white;
 }
 
 
@@ -471,8 +476,26 @@ p.bio {
 /* Projects Section */
 #projects {
     padding: 40px;
-    background: #000000;
     border-radius: 10px;
+}
+
+
+.project-card p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
+}
+
+
+.tech-used {
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 /* Title */
@@ -505,17 +528,17 @@ p.bio {
 
 /* Project Card */
 .project-card {
-    background: radial-gradient(circle, rgba(0, 128, 111, 0.226) 0%, rgba(26, 23, 11, 0.089) 70%);
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid var(--main-color);
-    box-shadow: 0 4px 15px rgba(245, 243, 243, 0.596);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(245, 243, 243, 0.171);
+    transition: all 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: scale(1.04) !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.199);
 }
 
 /* Project Image */
@@ -552,8 +575,7 @@ p.bio {
     gap: 10px;
 }
 
-.btn-demo,
-.btn-github {
+.btn-demo {
     padding: 8px 15px;
     border-radius: 8px;
     text-decoration: none;
@@ -563,8 +585,8 @@ p.bio {
 
 .btn-demo {
     background: var(--main-color);
-    color: white;
     width: 100%;
+    color: white;
 }
 
 .btn-demo:hover {
@@ -579,7 +601,6 @@ p.bio {
 }
 
 .contact-section {
-    background: radial-gradient(circle, rgba(0, 128, 111, 0.226) 0%, rgba(26, 23, 11, 0.089) 70%);
     padding: 40px 20px;
     text-align: center;
     border-radius: 10px;
@@ -590,25 +611,51 @@ p.bio {
 
 .contact-section h2 {
     font-size: 28px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     color: var(--main-color);
 }
 
-.contact-info p {
+
+
+
+.whatsapp-btn {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
     font-size: 18px;
-    margin: 10px 0;
-    color: #333;
-}
-
-.contact-info a {
-    color: var(--main-);
+    border-radius: 50px;
     text-decoration: none;
-    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+    margin-right: 4px;
 }
 
-.contact-info a:hover {
-    color: rgb(6, 82, 105);
+.whatsapp-btn:hover {
+    background-color: #000000;
+    color: white;
 }
+
+.email-btn {
+    background-color: #0072c6;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.email-btn:hover {
+    background-color: #000000;
+    color: white;
+}
+
+
 
 footer {
     background: radial-gradient(circle, rgba(0, 128, 111, 0.226) 0%, rgba(26, 23, 11, 0.089) 70%);
